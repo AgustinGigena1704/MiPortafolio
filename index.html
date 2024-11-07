@@ -3,110 +3,240 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Mi Portafolio
+   Portafolio
   </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
   <style>
    body {
             font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .sticky-header {
-            position: -webkit-sticky;
-            position: sticky;
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
             top: 0;
-            z-index: 10;
+            left: 0;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem 2rem;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .projects-section, .skills-section, .resume-section, .contact-section {
+            margin-bottom: 4rem;
+        }
+        .project-item, .skill-item, .resume-item, .contact-item {
+            margin-bottom: 1.5rem;
+        }
+        .project-item img, .resume-item img {
+            width: 100%;
+            height: auto;
+        }
+        .contact-item i {
+            margin-right: 0.5rem;
         }
   </style>
  </head>
- <body class="bg-gray-900 text-gray-200">
-  <header class="bg-gray-800 shadow sticky-header">
-   <div class="container mx-auto px-6 py-3">
-    <div class="flex items-center justify-between">
-     <div class="text-2xl font-bold text-gray-200">
-      Mi Portafolio
-     </div>
-     <nav class="flex space-x-4">
-      <a class="text-gray-200 hover:text-gray-400" href="#about">
-       Sobre Mí
-      </a>
-      <a class="text-gray-200 hover:text-gray-400" href="#projects">
+ <body>
+  <header id="header">
+   <h1>
+    Mi Portafolio
+   </h1>
+   <nav>
+    <ul>
+     <li>
+      <a href="#projects">
        Proyectos
       </a>
-      <a class="text-gray-200 hover:text-gray-400" href="#contact">
+     </li>
+     <li>
+      <a href="#skills">
+       Aptitudes
+      </a>
+     </li>
+     <li>
+      <a href="#resume">
+       Curriculum
+      </a>
+     </li>
+     <li>
+      <a href="#contact">
        Contacto
       </a>
-     </nav>
-    </div>
-   </div>
+     </li>
+    </ul>
+   </nav>
   </header>
-  <main class="container mx-auto px-6 py-8 mt-16">
-   <section class="my-8" id="about">
-    <h2 class="text-3xl font-bold text-gray-200">
-     Sobre Mí
-    </h2>
-    <p class="mt-4 text-gray-400">
-     Soy un desarrollador con experiencia en aplicaciones de escritorio C# (.NET Framework y POO) junto con un manejo eficiente de datos utilizando SQL.
-    </p>
-   </section>
-   <section class="my-8" id="projects">
-    <h2 class="text-3xl font-bold text-gray-200">
+  <div class="container">
+   <section class="projects-section" id="projects">
+    <h2 class="section-title">
      Proyectos
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-     <div class="bg-gray-800 shadow-md rounded-lg overflow-hidden">
-      <img alt="Imagen de un proyecto web con una interfaz de usuario moderna y limpia" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/mebzpuFvxxyBAKWPSz8nHDItmzOdN5PRPSzHHs4e95k04quTA.jpg" width="600"/>
-      <div class="p-4">
-       <h3 class="text-xl font-bold text-gray-200">
-        Proyecto 1
-       </h3>
-       <p class="mt-2 text-gray-400">
-        Descripción breve del proyecto 1.
-       </p>
-      </div>
-     </div>
-     
+    <div class="project-item">
+     <img alt="Captura de pantalla del proyecto 1 mostrando una aplicación web con un diseño moderno y limpio" height="400" src="https://storage.googleapis.com/a1aa/image/KQZmHpgdI5b5CF3NlKXUuM2QFPoqEBLZsQKQlqBORXppzq7E.jpg" width="600"/>
+     <h3>
+      Proyecto 1
+     </h3>
+     <p>
+      Descripción del proyecto 1.
+     </p>
+    </div>
+    <div class="project-item">
+     <img alt="Captura de pantalla del proyecto 2 mostrando una aplicación móvil con una interfaz de usuario intuitiva" height="400" src="https://storage.googleapis.com/a1aa/image/oybap3Y5gQpuBVapjs0957W6y0G4MfTfSCKae79BhKwPdWdnA.jpg" width="600"/>
+     <h3>
+      Proyecto 2
+     </h3>
+     <p>
+      Descripción del proyecto 2.
+     </p>
+    </div>
+    <div class="project-item">
+     <img alt="Captura de pantalla del proyecto 3 mostrando un sitio web de comercio electrónico con una variedad de productos" height="400" src="https://storage.googleapis.com/a1aa/image/AOxnUR30Ny4aHVfFx5xrKnvV4QDpw4QPhmFiFSAQHLfiOruTA.jpg" width="600"/>
+     <h3>
+      Proyecto 3
+     </h3>
+     <p>
+      Descripción del proyecto 3.
+     </p>
+    </div>
    </section>
-   <section class="my-8" id="contact">
-    <h2 class="text-3xl font-bold text-gray-200">
+   <section class="skills-section" id="skills">
+    <h2 class="section-title">
+     Aptitudes
+    </h2>
+    <div class="skill-item">
+     <h3>
+      HTML
+     </h3>
+     <p>
+      Descripción de la aptitud en HTML.
+     </p>
+    </div>
+    <div class="skill-item">
+     <h3>
+      CSS
+     </h3>
+     <p>
+      Descripción de la aptitud en CSS.
+     </p>
+    </div>
+    <div class="skill-item">
+     <h3>
+      JavaScript
+     </h3>
+     <p>
+      Descripción de la aptitud en JavaScript.
+     </p>
+    </div>
+    <div class="skill-item">
+     <h3>
+      React
+     </h3>
+     <p>
+      Descripción de la aptitud en React.
+     </p>
+    </div>
+   </section>
+   <section class="resume-section" id="resume">
+    <h2 class="section-title">
+     Curriculum
+    </h2>
+    <div class="resume-item">
+     <img alt="Captura de pantalla del curriculum mostrando la experiencia laboral y la educación" height="400" src="https://storage.googleapis.com/a1aa/image/DafmPesADspeRJ0xGjohmkguR2GdjERYh0JsBKqFxMuGdWdnA.jpg" width="600"/>
+     <h3>
+      Experiencia Laboral
+     </h3>
+     <p>
+      Descripción de la experiencia laboral.
+     </p>
+    </div>
+    <div class="resume-item">
+     <img alt="Captura de pantalla del curriculum mostrando las habilidades y certificaciones" height="400" src="https://storage.googleapis.com/a1aa/image/zJYI7o9if8WyR6oVNHfXzmIoJ3IiuYhbPWCTKsvDIRPlOruTA.jpg" width="600"/>
+     <h3>
+      Educación
+     </h3>
+     <p>
+      Descripción de la educación.
+     </p>
+    </div>
+   </section>
+   <section class="contact-section" id="contact">
+    <h2 class="section-title">
      Contacto
     </h2>
-    <form class="mt-4">
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <input class="w-full p-3 border border-gray-700 rounded-lg bg-gray-900 text-gray-200" placeholder="Nombre" type="text"/>
-      <input class="w-full p-3 border border-gray-700 rounded-lg bg-gray-900 text-gray-200" placeholder="Correo Electrónico" type="email"/>
-     </div>
-     <textarea class="w-full p-3 border border-gray-700 rounded-lg bg-gray-900 text-gray-200 mt-4" placeholder="Mensaje"></textarea>
-     <button class="mt-4 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-500" type="submit">
-      Enviar
-     </button>
-    </form>
-   </section>
-  </main>
-  <footer class="bg-gray-800 shadow mt-8">
-   <div class="container mx-auto px-6 py-4">
-    <div class="flex justify-between items-center">
-     <p class="text-gray-200">
-      © 2023 Mi Portafolio. Todos los derechos reservados.
-     </p>
-     <div class="flex space-x-4">
-      <a class="text-gray-200 hover:text-gray-400" href="#">
-       <i class="fab fa-facebook-f">
-       </i>
-      </a>
-      <a class="text-gray-200 hover:text-gray-400" href="#">
-       <i class="fab fa-twitter">
-       </i>
-      </a>
-      <a class="text-gray-200 hover:text-gray-400" href="#">
-       <i class="fab fa-linkedin-in">
-       </i>
-      </a>
-     </div>
+    <div class="contact-item">
+     <i class="fas fa-envelope">
+     </i>
+     <span>
+      correo@ejemplo.com
+     </span>
     </div>
-   </div>
-  </footer>
+    <div class="contact-item">
+     <i class="fas fa-phone">
+     </i>
+     <span>
+      +123 456 7890
+     </span>
+    </div>
+    <div class="contact-item">
+     <i class="fas fa-map-marker-alt">
+     </i>
+     <span>
+      Dirección, Ciudad, País
+     </span>
+    </div>
+   </section>
+  </div>
+  <script>
+   let lastScrollTop = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                header.style.top = '-80px';
+            } else {
+                header.style.top = '0';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Ensure the header remains visible when clicking on navigation links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function() {
+                header.style.top = '0';
+            });
+        });
+  </script>
  </body>
 </html>
